@@ -1,6 +1,6 @@
 # Thirteen (13)
 ---- 
-This repository contains the source code that we use as dashboard system and REST API for data communication on our HIMIFDA mobile application.
+This repository contains the source code that we use for dashboard system and REST API for data communication on our HIMIFDA mobile application.
 
 ----
 ## Requirements 
@@ -23,7 +23,7 @@ This repository contains the source code that we use as dashboard system and RES
 
 ----
 ## Contributor 
-* Andrea Damayanti
+* [Andrea Damayanti] (https://github.com/andrdmynti)
 * [Pramesti Hatta K.](https://github.com/opam22)
 * [Trianto Fajar](https://github.com/triantofajar)
 * [Windi Triyani](https://github.com/winditriyani)
