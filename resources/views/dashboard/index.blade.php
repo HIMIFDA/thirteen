@@ -1,11 +1,5 @@
-<html>
-    <head>
-        <title>App Name</title>
-    </head>
-    <body>
-        <h1>Hello</h1>
-        <div class="container">
-            @yield('content')
-        </div>
-    </body>
-</html>
+@extends('layouts.dashboard')
+
+@section('content')
+    <h4>Dashboard index.</h4>
+@stop

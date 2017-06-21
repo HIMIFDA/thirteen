@@ -13,11 +13,35 @@
 
 Route::group(array('prefix' => 'dashboard'), function() {
 
+    Route::get('/', [
+        'as' => 'dashboard-index', 'uses' => 'DashboardController@index'
+    ]); 
+
     // dashboard blog
     Route::group(array('prefix' => 'blog'), function() {
         Route::get('/', [
                 'as' => 'blog-index', 'uses' => 'DashboardBlogController@index'
             ]); 
+
+        Route::get('/new', [
+            'as' => 'blog-new', 'uses' => 'DashboardBlogController@new_post'
+        ]); 
+
+        Route::post('/new', [
+            'as' => 'blog-submit', 'uses' => 'DashboardBlogController@submit_post'
+        ]); 
+
+        Route::get('/delete/{id}', [
+            'as' => 'blog-delete', 'uses' => 'DashboardBlogController@delete'
+        ]); 
+
+        Route::get('/edit/{id}', [
+            'as' => 'blog-edit', 'uses' => 'DashboardBlogController@edit'
+        ]); 
+
+        Route::post('/edit', [
+            'as' => 'blog-update', 'uses' => 'DashboardBlogController@update'
+        ]); 
     });
 
     // dashboard people
