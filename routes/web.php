@@ -11,6 +11,25 @@
 |
 */
 
+Route::group(array('prefix' => 'api'), function() {
+
+
+    // api blog
+    Route::group(array('prefix' => 'blog'), function() {
+        
+        Route::get('/get', [
+                'as' => 'api-blog-index', 'uses' => 'Api\ApiBlogController@getPosts'
+            ]); 
+
+        Route::get('/get/{id}', [
+                'as' => 'api-blog-get', 'uses' => 'Api\ApiBlogController@getPost'
+            ]); 
+
+    });
+
+});
+
+
 Route::group(array('prefix' => 'dashboard'), function() {
 
     Route::get('/', [
